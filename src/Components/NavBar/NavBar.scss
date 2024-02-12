@@ -17,6 +17,39 @@
 
 .avatar {
   background-image: url("https://occ-0-2484-3663.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229");
-  @include imageProperty(20px, 20px);
-  background-size: 20px;
+  @include imageProperty(30px, 30px);
+  background-size: 30px;
+}
+.section-1 {
+  @include displayAlign(20px);
+}
+.browse-list {
+  display: none;
+}
+.nav-list:hover {
+  color: rgb(176, 173, 173);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .browse-list {
+    @include displayAlign(10px);
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-list {
+    display: none;
+  }
+  .caret-icon {
+    background-image: url(../../assets/caret-down-solid.svg);
+    @include imageProperty(20px, 20px);
+  }
+  .list-wrap {
+    position: absolute;
+    top: 30px;
+    background-color: #1d1b1c;
+    width: 136px;
+    padding: 20px;
+    @include displayAlign(10px);
+    flex-direction: column;
+  }
 }
