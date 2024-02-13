@@ -1,24 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Search.scss";
+import useToggle from "../../Common/Hooks/useToggle";
 
 const Search = () => {
   const [expand, setExpand] = useState(false);
   const searchContainerRef = useRef(null);
-  useEffect(() => {
-    document.addEventListener("click", handleClick);
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, [expand]);
-  const handleClick = (event) => {
-    if (
-      expand &&
-      searchContainerRef.current &&
-      !searchContainerRef.current.contains(event.target)
-    ) {
-      setExpand(false);
-    }
-  };
+  useToggle(expand, setExpand, searchContainerRef);
   return (
     <>
       <div
