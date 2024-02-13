@@ -30,6 +30,9 @@
   color: rgb(176, 173, 173);
   cursor: pointer;
 }
+.section-2 {
+  @include displayAlign(20px);
+}
 @media (max-width: 768px) {
   .browse-list {
     @include displayAlign(10px);

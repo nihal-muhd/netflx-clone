@@ -1,11 +1,11 @@
 import React from 'react'
 
-const HomeScreen = () => {
+const HomePage = () => {
     return (
         <div>
-            HomeScreen
+            HomePage
         </div>
     )
 }
 
-export default HomeScreen
+export default HomePage

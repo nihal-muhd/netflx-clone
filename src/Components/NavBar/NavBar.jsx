@@ -1,6 +1,7 @@
 import React from "react";
-import { navList } from "../../constants/variables";
 import "./NavBar.scss";
+import { navList } from "../../constants/variables";
+import Search from "../Search/Search";
 
 function NavBar() {
   return (
@@ -25,6 +26,7 @@ function NavBar() {
         </div>
       </div>
       <div className="section-2">
+        <Search />
         <div className="avatar"></div>
       </div>
     </div>

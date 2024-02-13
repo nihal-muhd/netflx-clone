@@ -1,0 +1,41 @@
+@import "../../Common/Styles/mixins.scss";
+.search-container {
+  @include displayAlign(10px);
+  padding: 5px;
+  box-sizing: border-box;
+  width: 30px;
+  transition: width 0.3s;
+}
+.search-icon {
+  background-image: url("../../assets/icons8-search.svg");
+  @include imageProperty(20px, 20px);
+  background-size: 20px;
+}
+input[type="text"] {
+  display: none;
+  transition: 0.3s;
+}
+.close-icon {
+  display: none;
+  transition: 0.3s;
+}
+.search-container.expand {
+  width: 250px;
+  border: 1px solid;
+  border-radius: 1px;
+}
+.search-container.expand > input[type="text"] {
+  display: block;
+  background-color: #111;
+  outline: none;
+  border: none;
+  caret-color: white;
+  color: white;
+  width: calc(100% - 65px);
+}
+.search-container.expand > .close-icon {
+  display: block;
+  background-image: url("../../assets/icons8-close.svg");
+  @include imageProperty(20px, 20px);
+  background-size: 20px;
+}
