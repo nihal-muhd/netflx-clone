@@ -5,9 +5,10 @@
   box-sizing: border-box;
   width: 30px;
   transition: width 0.3s;
+  height: 30px;
 }
 .search-icon {
-  background-image: url("../../assets/icons8-search.svg");
+  background-image: url("../../assets/svg/icons8-search.svg");
   @include imageProperty(20px, 20px);
   background-size: 20px;
 }
@@ -35,7 +36,7 @@ input[type="text"] {
 }
 .search-container.expand > .close-icon {
   display: block;
-  background-image: url("../../assets/icons8-close.svg");
+  background-image: url("../../assets/svg/icons8-close.svg");
   @include imageProperty(20px, 20px);
   background-size: 20px;
 }

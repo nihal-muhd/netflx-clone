@@ -15,11 +15,6 @@
   background-size: 100px;
 }
 
-.avatar {
-  background-image: url("https://occ-0-2484-3663.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229");
-  @include imageProperty(30px, 30px);
-  background-size: 30px;
-}
 .section-1 {
   @include displayAlign(20px);
 }
@@ -43,7 +38,7 @@
     display: none;
   }
   .caret-icon {
-    background-image: url(../../assets/caret-down-solid.svg);
+    background-image: url(../../assets/svg/caret-down-solid.svg);
     @include imageProperty(20px, 20px);
   }
   .list-wrap {
