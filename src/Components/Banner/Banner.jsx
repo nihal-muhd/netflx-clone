@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Banner.scss";
 import axios from "../../axios";
-import { API_KEY, imageUrl } from "../../constants/urls";
+import { API_KEY, bannerUrl, imageUrl } from "../../constants/urls";
 
 function Banner() {
   const [movie, setMovie] = useState();
   useEffect(() => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US`
-      )
-      .then((response) => {
-        setMovie(response.data.results[2]);
-      });
+    axios.get(bannerUrl).then((response) => {
+      console.log(response.data.results[1]);
+      setMovie(response.data.results[1]);
+    });
   }, []);
   return (
     <div
@@ -22,10 +19,10 @@ function Banner() {
       className="banner"
     >
       <div className="content">
-        <h1 className="title">{movie ? movie.name : ""}</h1>
+        <h1 className="title">{movie ? movie.original_title : ""}</h1>
         <div className="banner_buttons">
           <button className="button">Play</button>
-          <button className="button">My list</button>
+          <button className="button">More info</button>
         </div>
         <h1 className="discription">{movie ? movie.overview : ""} </h1>
       </div>
