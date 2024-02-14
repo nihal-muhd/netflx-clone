@@ -25,14 +25,14 @@
   @include imageProperty(30px, 30px);
   background-size: 30px;
 }
-.list-wrap {
+.profile-list-wrap {
   @include displayAlign(10px);
   cursor: pointer;
   padding: 5px;
   box-sizing: border-box;
   transition: 0.3s;
 }
-.list-wrap:hover {
+.profile-list-wrap:hover {
   background-color: rgb(130, 130, 130);
 }
 .dropdown-icon {

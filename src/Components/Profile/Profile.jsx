@@ -14,7 +14,7 @@ const Profile = () => {
         <div className={`profile-dropdown ${expand ? "expand" : ""}`}>
           {profileList.map((val, index) => {
             return (
-              <div className="list-wrap" key={index}>
+              <div className="profile-list-wrap" key={index}>
                 <div className={`dropdown-icon ${val.name}`}></div>
                 <div className="list-txt">{val.displayName}</div>
               </div>

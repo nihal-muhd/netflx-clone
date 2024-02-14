@@ -1,0 +1,37 @@
+@import "../../Common/Styles/mixins.scss";
+.navList-container {
+  @include displayAlign(20px);
+}
+.browse-list {
+  display: none;
+}
+.nav-list:hover {
+  color: rgb(176, 173, 173);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .browse-list {
+    @include displayAlign(10px);
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-list {
+    display: none;
+  }
+  .caret-icon {
+    background-image: url(../../assets/svg/caret-down-solid.svg);
+    @include imageProperty(20px, 20px);
+  }
+  .list-wrap {
+    display: none;
+  }
+  .list-wrap.expand {
+    position: absolute;
+    top: 30px;
+    background-color: #1d1b1c;
+    width: 136px;
+    padding: 20px;
+    @include displayAlign(10px);
+    flex-direction: column;
+  }
+}
