@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./RowPost.css"
 import axios from '../../axios'
-import { imageUrl, API_KEY } from '../../constants/constants'
+import { imageUrl, API_KEY } from '../../constants/urls'
 import Youtube from 'react-youtube'
 
 function RowPost(props) {
@@ -46,8 +46,8 @@ function RowPost(props) {
           movies.map((obj) => {
             return (
               <div>
-              <img  onClick={() => handleMovie(obj.id)} className={props.isSmall ? 'smallPoster' : 'poster'} src={`${imageUrl + obj.backdrop_path}`}  alt="" />
-              <p>{obj.name?obj.name:obj.title}</p>
+                <img onClick={() => handleMovie(obj.id)} className={props.isSmall ? 'smallPoster' : 'poster'} src={`${imageUrl + obj.backdrop_path}`} alt="" />
+                <p>{obj.name ? obj.name : obj.title}</p>
               </div>
             )
           })

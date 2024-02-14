@@ -4,7 +4,7 @@ import Search from "../Search/Search";
 import Profile from "../Profile/Profile";
 import NavList from "../NavList/NavList";
 
-function NavBar() {
+const NavBar = () => {
   return (
     <div className="navbar">
       <div className="section-1">
@@ -17,6 +17,6 @@ function NavBar() {
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;
