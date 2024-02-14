@@ -1,6 +1,50 @@
 @import "../../Common/Styles/mixins.scss";
+.profile-container {
+  position: relative;
+}
+.profile-dropdown {
+  display: none;
+  height: 0;
+  transition: 0.3s;
+  width: 0;
+}
+.profile-dropdown.expand {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 180px;
+  height: 120px;
+  border: 1px solid;
+  border-radius: 5px;
+  top: 35px;
+}
 .avatar {
   background-image: url("https://occ-0-2484-3663.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229");
   @include imageProperty(30px, 30px);
   background-size: 30px;
+}
+.list-wrap {
+  @include displayAlign(10px);
+  cursor: pointer;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.list-wrap:hover {
+  background-color: rgb(130, 130, 130);
+}
+.dropdown-icon {
+  @include imageProperty(15px, 15px);
+  background-size: 15px;
+}
+.dropdown-icon.account {
+  background-image: url("../../assets/svg/account.svg");
+}
+.dropdown-icon.manage {
+  background-image: url("../../assets/svg/manage.svg");
+}
+.dropdown-icon.help {
+  background-image: url("../../assets/svg/help.svg");
 }
