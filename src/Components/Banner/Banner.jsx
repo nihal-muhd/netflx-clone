@@ -7,7 +7,6 @@ function Banner() {
   const [movie, setMovie] = useState();
   useEffect(() => {
     axios.get(bannerUrl).then((response) => {
-      console.log(response.data.results[1]);
       setMovie(response.data.results[1]);
     });
   }, []);
