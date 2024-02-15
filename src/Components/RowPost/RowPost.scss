@@ -1,0 +1,52 @@
+.row {
+  margin-left: 20px;
+  color: #fff;
+  margin-top: 12px;
+}
+h2 {
+  margin-bottom: 12px;
+}
+
+.posters {
+  display: flex;
+  //   padding: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+/* This is for removing horizontal scrollbar */
+.posters::-webkit-scrollbar {
+  display: none;
+}
+
+.poster {
+  cursor: pointer;
+  max-height: 250px;
+  margin-right: 10px;
+}
+
+.poster:hover {
+  transform: scale(1.15);
+}
+
+.smallPoster {
+  cursor: pointer;
+  max-height: 150px;
+  margin-right: 10px;
+}
+
+.smallPoster:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .smallPoster {
+    width: 220px;
+  }
+  p {
+    width: 200px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

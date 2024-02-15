@@ -1,7 +1,7 @@
+@import "../../Common/Styles/mixins.scss";
 .banner {
+  @include imageProperty(640px, 100%);
   background-size: cover;
-  height: 550px;
-  color: white;
 }
 
 .content {

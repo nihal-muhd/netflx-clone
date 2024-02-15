@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import "./RowPost.css"
+import "./RowPost.scss"
 import axios from '../../axios'
 import { imageUrl, API_KEY } from '../../constants/urls'
 import Youtube from 'react-youtube'
