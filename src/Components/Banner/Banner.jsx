@@ -5,9 +5,11 @@ import { API_KEY, bannerUrl, imageUrl } from "../../constants/urls";
 
 function Banner() {
   const [movie, setMovie] = useState();
+
   useEffect(() => {
+    let x = Math.round(Math.random() * 20);
     axios.get(bannerUrl).then((response) => {
-      setMovie(response.data.results[1]);
+      setMovie(response?.data?.results[x]);
     });
   }, []);
   return (
@@ -21,7 +23,11 @@ function Banner() {
         className="banner"
       >
         <div className="content">
-          <h1 className="title">{movie ? movie.original_title : ""}</h1>
+          <h1 className="title">
+            {movie?.original_title
+              ? movie?.original_title
+              : movie?.original_name}
+          </h1>
           <div className="banner_buttons">
             <button className="button">Play</button>
             <button className="button">More info</button>
